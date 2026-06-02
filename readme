@@ -1,0 +1,97 @@
+# CRUD Web Application using Flask
+
+A simple CRUD (Create, Read, Update, Delete) web application built using Python Flask, HTML, and CSS. This project allows users to add, view, edit, update, and delete records through a clean and user-friendly web interface.
+
+## Features
+
+- Create new records with Name and Age
+- View all records in a table
+- Edit existing records
+- Update record details
+- Delete records
+- Simple and responsive UI
+- Beginner-friendly Flask project
+
+## Technologies Used
+
+- Python
+- Flask
+- HTML5
+- CSS3
+
+## Project Structure
+
+```text
+CRUD/
+│
+├── app.py
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── style.css
+```
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/crud-flask-app.git
+cd crud-flask-app
+```
+
+### 2. Install Flask
+
+```bash
+pip install flask
+```
+
+### 3. Run the Application
+
+```bash
+python app.py
+```
+
+### 4. Open in Browser
+
+```text
+http://127.0.0.1:5000
+```
+
+## How It Works
+
+1. Enter a Name and Age.
+2. Click the **Add** button to create a new record.
+3. Records are displayed in a table.
+4. Use the **Edit** button to modify a record.
+5. Click **Update** to save changes.
+6. Use the **Delete** button to remove a record.
+
+## Learning Outcomes
+
+This project helped in understanding:
+
+- Flask routing
+- Form handling in Flask
+- Dynamic HTML rendering using Jinja2
+- CRUD operations
+- Frontend design with HTML and CSS
+- Basic web application development
+
+## Future Enhancements
+
+- SQLite/MySQL database integration
+- Search functionality
+- Pagination
+- User authentication
+- Responsive mobile design
+
+## Author
+
+Radhika Thiriveedhi
+
+---
+
+⭐ If you found this project useful, consider giving it a star on GitHub.

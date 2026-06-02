@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Application</title>
+    <link rel="stylesheet"
+          href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>CRUD</h1>
+
+    {% if edit_index is none %}
+
+    <form action="/add" method="POST" class="form-box">
+
+        <input type="text"
+               name="name"
+               placeholder="Enter Name"
+               required>
+
+        <input type="number"
+               name="age"
+               placeholder="Enter Age"
+               required>
+
+        <button type="submit" class="add-btn">
+            Add
+        </button>
+
+    </form>
+
+    {% else %}
+
+    <form action="/update/{{ edit_index }}"
+          method="POST"
+          class="form-box">
+
+        <input type="text"
+               name="name"
+               value="{{ records[edit_index].name }}"
+               required>
+
+        <input type="number"
+               name="age"
+               value="{{ records[edit_index].age }}"
+               required>
+
+        <button type="submit" class="update-btn">
+            Update
+        </button>
+
+    </form>
+
+    {% endif %}
+
+    <table>
+
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for record in records %}
+
+        <tr>
+
+            <td>{{ record.name }}</td>
+            <td>{{ record.age }}</td>
+
+            <td>
+
+                <a href="/edit/{{ loop.index0 }}">
+                    <button class="edit-btn">
+                        Edit
+                    </button>
+                </a>
+
+                <a href="/delete/{{ loop.index0 }}">
+                    <button class="delete-btn">
+                        Delete
+                    </button>
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>
